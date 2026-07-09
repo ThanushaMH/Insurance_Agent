@@ -18,7 +18,6 @@ SETUP:
   2. Create a `.env` file in the project root (same folder as this file) with:
        OLLAMA_API_KEY=your-key-here
   3. Cloud models use a "-cloud" suffix on the model tag, e.g. "gpt-oss:120b-cloud".
-     Adjust MODEL_NAME below if your account uses a different tag.
 """
 
 import os
@@ -30,7 +29,7 @@ load_dotenv()  # reads .env in the current working directory into os.environ
 
 # Ollama Cloud's OpenAI-compatible chat endpoint.
 OLLAMA_CLOUD_URL = "https://ollama.com/api/chat"
-MODEL_NAME = "gpt-oss:120b-cloud"   # change to match the exact cloud tag in your account
+MODEL_NAME = "gpt-oss:120b-cloud"   
 REQUEST_TIMEOUT_SECONDS = 60
 
 API_KEY = os.environ.get("OLLAMA_API_KEY")
